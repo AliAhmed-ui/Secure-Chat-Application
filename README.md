@@ -189,13 +189,33 @@ Possible future enhancements:
 * Message storage/database integration
 * Better UI/UX
 * User registration system
-* End-to-end encryption
 * Voice/video calling
-* Cross-platform deployment
 * Cloud hosting
 
 ---
+## Configuration Before Running
 
+### Change Server IP Address
+
+In `Clientcode.py`, update the `HOST` variable with the IP address of the machine running the server.
+
+```python
+HOST = 'YOUR_SERVER_IP'
+```
+
+Example:
+
+```python
+HOST = '192.168.1.5'
+```
+
+---
+
+### Credential Files
+
+Make sure `usernames.txt` and `pass.txt` are present in the same directory as `server.py`.
+
+These files store usernames and passwords for login authentication.
 ## Screenshots
 
 Add screenshots of:
