@@ -104,6 +104,7 @@ cd secure-chat-app
 
 ```bash
 pip install pycryptodome
+pip install tkinter    #if you are on linux you may need to install tkinter seperately
 ```
 
 ---
