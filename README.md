@@ -195,7 +195,9 @@ Possible future enhancements:
 ---
 ## Configuration Before Running
 
-### Change Server IP Address
+Before running the project, make the following changes according to your system setup.
+
+### 1. Change the Server IP Address
 
 In `Clientcode.py`, update the `HOST` variable with the IP address of the machine running the server.
 
@@ -209,21 +211,60 @@ Example:
 HOST = '192.168.1.5'
 ```
 
+You can find your local IP address using:
+
+#### Windows
+```bash
+ipconfig
+```
+
+#### Linux
+```bash
+ifconfig
+```
+
+or
+
+```bash
+ip addr
+```
+
 ---
 
-### Credential Files
+### 2. Update Credential File Paths
 
-Make sure `usernames.txt` and `pass.txt` are present in the same directory as `server.py`.
+In `server.py`, change the paths of `usernames.txt` and `pass.txt` according to where these files are stored on your computer.
 
-These files store usernames and passwords for login authentication.
-## Screenshots
+Current code:
 
-Add screenshots of:
+```python
+with open("/home/aliahmed/MEGA/Semester 8/Network Programming/Project/usernames.txt", "r") as f:
+```
 
-* Login window
-* Chat interface
-* File transfer
-* Server terminal
+```python
+with open("/home/aliahmed/MEGA/Semester 8/Network Programming/Project/pass.txt", "r") as f:
+```
+
+Replace them with your own file paths.
+
+Example (Windows):
+
+```python
+with open("C:/Users/Ali/Desktop/project/usernames.txt", "r") as f:
+```
+
+```python
+with open("C:/Users/Ali/Desktop/project/pass.txt", "r") as f:
+```
+
+Example (Linux):
+
+```python
+with open("/home/username/project/usernames.txt", "r") as f:
+```
+
+```python
+with open("/home/username/project/pass.txt", "r") as f:
 
 ---
 
